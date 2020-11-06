@@ -41,9 +41,9 @@ main {
   font-size: 1.2em;
 }
 
-.logo img {
-  height: 4vh;
-  width: 4vh;
+.logo-img {
+  height: 4.5rem;
+  width: 4.5rem;
 }
 
 /* navigation list */
@@ -82,7 +82,7 @@ media query for non-mobile nav bar
 min-width set to width of nav elements 
 such that no text wraps 
 */
-@media screen and (min-width: 60rem) {
+@media screen and (min-width: 80rem) {
   .navbar-links {
     display: flex;
     justify-content: space-between;
