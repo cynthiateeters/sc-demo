@@ -17,6 +17,7 @@ img {
 }
 
 .hero-img {
+  width: 25%;
   height: auto;
   align-self: center;
 }
