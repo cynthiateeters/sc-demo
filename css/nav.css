@@ -120,7 +120,7 @@ such that no text wraps
 */
 @media screen and (min-width: 60rem) {
   /* turn off toggle button */
-  .toggle-button {
+  .navbar-toggle {
     display: none;
   }
 
