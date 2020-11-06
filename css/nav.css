@@ -3,10 +3,7 @@ html {
   scroll-behavior: smooth;
 }
 
-/* 
- get rid of padding & sizing on body so
- header is at top
-*/
+/* get rid of padding & sizing */
 body {
   box-sizing: border-box;
   padding: 0;
@@ -41,9 +38,9 @@ main {
   font-size: 1.2em;
 }
 
-.logo-img {
-  height: 4.5rem;
-  width: 4.5rem;
+.logo img {
+  height: 4rem;
+  width: 4rem;
 }
 
 /* navigation list */
@@ -54,10 +51,7 @@ nav li {
   padding: 0.5em 0;
 }
 
-/*  
- style all a tags in header 
- and then on hover
-*/
+/*  style all a tags in header */
 
 header a {
   color: whitesmoke;
@@ -69,11 +63,53 @@ header a {
   display: inline-block;
 }
 
-header a:hover,
+nav a:hover,
 header a:focus {
-  filter: invert(1);
+  /* filter: invert(1); */
+  background-color: #d4af37;
+  color: #333;
   border-radius: 10px;
   outline: none;
+}
+
+/* toggle menu open & close */
+
+.navbar-toggle {
+  position: absolute;
+  top: 3.6rem;
+  right: 2rem;
+  font-size: 2em;
+}
+.navbar-links {
+  display: none;
+}
+
+.navbar-links.active {
+  display: block;
+}
+
+/* toggle hamburger button open & close 
+*/
+
+.toggle-button .bar {
+  height: 4px;
+  width: 100%;
+  background-color: whitesmoke;
+  border-radius: 10px;
+  opacity: 1;
+  transform: translateY(0) rotate(0);
+  transform-origin: center;
+  transition: all 200ms ease;
+}
+
+.toggle-button.active .bar1 {
+  transform: translateY(200%) rotate(45deg);
+}
+.toggle-button.active .bar2 {
+  opacity: 0;
+}
+.toggle-button.active .bar3 {
+  transform: translateY(-200%) rotate(-45deg);
 }
 
 /* 
@@ -82,13 +118,18 @@ media query for non-mobile nav bar
 min-width set to width of nav elements 
 such that no text wraps 
 */
-@media screen and (min-width: 80rem) {
+@media screen and (min-width: 60rem) {
+  /* turn off toggle button */
+  .toggle-button {
+    display: none;
+  }
+
   .navbar-links {
     display: flex;
     justify-content: space-between;
   }
 
-  /* change navbar flex direction to row */
+  /* change flex direction to row */
   .navbar {
     flex-direction: row;
     justify-content: space-between;
