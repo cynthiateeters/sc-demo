@@ -1,0 +1,102 @@
+/* make scrolling smooth */
+html {
+  scroll-behavior: smooth;
+}
+
+/* 
+ get rid of padding & sizing on body so
+ header is at top
+*/
+body {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/* add some padding back to rest of page */
+main {
+  padding: 2vw;
+}
+
+/* navbar */
+
+.navbar {
+  padding: 1.5rem;
+  font-size: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  background-color: #333;
+  color: whitesmoke;
+  margin-bottom: 1rem;
+}
+
+/* logo */
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo h1 {
+  font-size: 1.2em;
+}
+
+.logo img {
+  height: 4vh;
+  width: 4vh;
+}
+
+/* navigation list */
+
+nav li {
+  list-style: none;
+  display: block;
+  padding: 0.5em 0;
+}
+
+/*  
+ style all a tags in header 
+ and then on hover
+*/
+
+header a {
+  color: whitesmoke;
+  background-color: #333;
+  padding: 1rem 1.25rem;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+header a:hover,
+header a:focus {
+  filter: invert(1);
+  border-radius: 10px;
+  outline: none;
+}
+
+/* 
+media query for non-mobile nav bar
+
+min-width set to width of nav elements 
+such that no text wraps 
+*/
+@media screen and (min-width: 60rem) {
+  .navbar-links {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  /* change navbar flex direction to row */
+  .navbar {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  /* give ul room for link text */
+  .navbar ul {
+    display: flex;
+    justify-content: space-between;
+  }
+}
