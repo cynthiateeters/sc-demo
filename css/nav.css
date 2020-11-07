@@ -37,6 +37,7 @@ main {
 .logo-title {
   display: flex;
   flex-direction: column;
+  font-size: 1rem;
 }
 
 .logo h1 {
@@ -69,7 +70,7 @@ header a {
   color: whitesmoke;
   background-color: #333;
   padding: 1rem 1.25rem;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   letter-spacing: 2px;
   text-decoration: none;
   display: inline-block;
@@ -88,9 +89,9 @@ header a:focus {
 
 .navbar-toggle {
   position: absolute;
-  top: 3.6rem;
-  right: 2rem;
-  font-size: 1.75em;
+  top: 1rem;
+  right: 1.5rem;
+  font-size: 1.5rem;
 }
 .navbar-links {
   display: none;
@@ -103,13 +104,17 @@ header a:focus {
   margin-top: 2rem;
 }
 
+.symbol-toggle {
+  font-size: 1.5rem;
+}
+
 /* 
 media query for non-mobile nav bar
 
 min-width set to width of nav elements 
 such that no text wraps 
 */
-@media screen and (min-width: 85rem) {
+@media screen and (min-width: 70rem) {
   /* turn off toggle button */
   .navbar-toggle {
     display: none;
