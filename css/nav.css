@@ -34,8 +34,20 @@ main {
   align-items: center;
 }
 
+.logo-title {
+  display: flex;
+  flex-direction: column;
+}
+
 .logo h1 {
   font-size: 1.2em;
+  padding: 0;
+  line-height: 0.8;
+}
+
+.logo h2 {
+  font-size: 0.8em;
+  padding: 0;
 }
 
 .logo img {
@@ -82,10 +94,13 @@ header a:focus {
 }
 .navbar-links {
   display: none;
+  border-top: none;
 }
 
 .navbar-links.active {
   display: block;
+  border-top: 1px solid whitesmoke;
+  margin-top: 2rem;
 }
 
 /* 
@@ -94,7 +109,7 @@ media query for non-mobile nav bar
 min-width set to width of nav elements 
 such that no text wraps 
 */
-@media screen and (min-width: 75rem) {
+@media screen and (min-width: 85rem) {
   /* turn off toggle button */
   .navbar-toggle {
     display: none;
@@ -103,6 +118,16 @@ such that no text wraps
   .navbar-links {
     display: flex;
     justify-content: space-between;
+    border-top: none;
+  }
+
+  .navbar-links.active {
+    display: block;
+    border-top: none;
+  }
+
+  header a {
+    font-size: 1.2rem;
   }
 
   /* change flex direction to row */
